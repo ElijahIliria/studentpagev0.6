@@ -1,0 +1,412 @@
+/* styles.css */
+/* Global styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header & Navigation Bar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* About Eli Iliria */
+.brand-title {
+  font-weight: bold;
+  color: #fff; /* Add brand title styles here */
+}
+
+.brand-title:hover {
+  cursor: pointer;
+}
+
+/* Grid Layout */
+.hero-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  gap: 20px; /* Gap between columns */
+  min-height: calc(100vh - 80px); /* Adjusted for footer */
+}
+
+/* Centered content in each grid item */
+.centered-content {
+  text-align: center;
+  padding: 50px 30px 30px 30px;
+}
+
+/* Heading 1 */
+h1 {
+  color: #333;
+  font-size: 4em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Sic Infit Heading */
+#latin-aphorism {
+  font-style: italic;
+  padding-top: 15px;
+}
+
+/* Heading 2 - Recent Activity */
+h2 {
+  color: #444444FF;
+}
+
+/* Index Heading 2 */
+#index-h2 {
+  text-decoration: underline;
+}
+
+/* Profile Picture and Description */
+.profile-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 700px;
+  padding-top: 30px;
+}
+
+/* Right side profile image style */
+#profile-pic {
+  max-width: 100%; /* Aspect ratio */
+  max-height: 700px; /* You can adjust this value */
+  transition: transform 0.3s ease-in-out;
+}
+
+#profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Tooltip Profile Image Description */
+#profile-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjusted opacity */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Tooltip hover effect for profile */
+.profile-container:hover #profile-description {
+  opacity: 1;
+}
+
+/* Placeholder styles for Recent Activity */
+.recent-activity {
+  padding: 20px 0;
+}
+
+.recent-activity-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.activity-button {
+  border-radius: 10px;
+  background-color: #ddd;
+  padding: 30px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.activity-button-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* The link text will inherit the color from its parent */
+  display: block; /* Makes the link fill the entire space of its container */
+  overflow-block: hidden;
+}
+
+.activity-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  background-color: #c6c6c6;
+}
+
+.about-me-container {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 20px; /* Vertical padding between rows */
+  padding: 20px 0; /* Padding around the grid */
+}
+
+/* Biography Section Styles */
+.bio-section {
+  text-align: center;
+}
+
+/* Resume Section Styles */
+.resume-section {
+  text-align: center;
+  background-color: #eaeaea; /* Slightly different background color */
+}
+
+/* Download Buttons Styles */
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 30px;
+}
+
+.download-button {
+  display: inline-block;
+  width: 150px; /* Width of the button */
+  height: 80px; /* Height of the button */
+  line-height: 80px; /* Center text vertically */
+  text-align: center;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Main Content Styles */
+main h1 {
+  color: #333;
+  margin-top: 60px;
+}
+
+main p {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Contact Form Styles */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #dddddd; /* Experiment */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
+}
+
+form textarea {
+  resize: vertical; /* Allows the user to vertically resize the textarea (but not horizontally) */
+}
+
+form input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555555;
+}
+
+/* Utility classes */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Image Banner */
+.banner {
+  width: 100%;
+  overflow: hidden; /* Ensures no horizontal scroll */
+}
+
+.banner-image {
+  width: 100%;
+  display: block; /* Removes bottom space/line */
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.blog-entry {
+  background-color: #fff;
+  text-decoration: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps the child elements contained within the border-radius */
+}
+
+.blog-thumbnail {
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Fixed height for all entries */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-title {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  margin: 0; /* Removes default margins */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.blog-entry:hover .blog-title {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Blog Post Tags Style */
+.post-tags {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.post-tags a {
+  display: inline-block;
+  background-color: #e1e1e1;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.post-tags a:hover {
+  background-color: #cacaca;
+}
+
+/* Blog Post content */
+main.blog-post {
+  margin-top: 60px; /* Adjusted to prevent overlap with the fixed navbar */
+  padding: 20px;
+}
+
+article {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-content p {
+  text-indent: 2em; /* Adjust value to according to preferred design */
+  margin-bottom: 1em; /* This creates space between the paragraphs */
+  text-align: justify; /* This ensures that text is evenly distributed in each line */
+}
+
+.post-meta {
+  font-style: italic;
+  color: #888;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Linkedin Hyperlink */
+footer a:hover {
+  color: #BD93F9; /* Change the text color on hover to dracula pink color */
+  text-decoration: underline;
+}
+
+/* Responsive Homepage Styles */
+@media screen and (max-width: 768px) {
+  .split {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .left, .right {
+    position: relative;
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Responsive Grid Styles */
+@media screen and (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .post-tags a {
+    margin-bottom: 5px;
+  }
+  article {
+    margin: 20px;
+  }
+}
